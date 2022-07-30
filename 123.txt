@@ -1,0 +1,427 @@
+4.small num among two num
+5.smalll num among three num
+6.find the sum of digits of given num
+7.find the product of digits of given number
+8.reverse given number
+9.given num is palindrom or not
+10.given num is arm strong number or not
+11.given year is leap year or not
+12.pattern
+*
+**
+***
+****
+13.
+*****
+***
+**
+*
+14.)1
+12
+123
+1234
+12345
+
+15.)1
+22
+33
+4444
+55555
+
+16)55555
+4444
+333
+22
+1
+
+17)12345
+1234
+123
+12
+1
+
+18)
+find first 100 even numbers among 1000 numbers
+19)find first 100prime numbers among 1000 numbers
+20.)write a programme to basic calculator
+21.)write a program for multiplication table for 10
+22)write  a program to calculate the gross salary of employee
+23)find the percentage of student for 6 subjects
+24)swap two numbers without using third variable
+25.)write a program swat two numbers
+26.)find the given number perfect number of not
+27)find the factorial of a given number
+28)find the Fibonacci series of a given number
+29)print the ASCII table
+30.)print the below pattern
+1
+01
+101
+0101
+
+31)
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+32)write a programe to given number is strong number
+
+33check the vowels
+
+34)find a given number is positive or negative
+
+35)write a programe to enter input is alphabet or not 
+
+36)to find factors of numbers
+
+////big num among two num///
+a=[]
+n=int(input('enter the number of elements u need'))
+for i in range(1,n+1):
+    b=int(input('number'))
+    a.append(b)
+a.sort()
+print(a[0])
+
+/////find the sum of digits of given num/////
+a=int(input("enter the num"))
+
+sum=0
+
+for i in str(a):
+    
+sum+=int(i)
+    
+
+print(sum)
+
+#####
+a=int(input())
+b=int(input())
+c=a+b
+print(c)
+
+#######
+
+def getSum(n):
+    
+   
+ sum = 0
+    while (n != 0):
+       
+        
+sum = sum + (n % 10)  
+ n = n//10 
+       
+    
+return sum
+   
+
+n = 12345
+
+print(getSum(n))
+
+/////product of given num////
+
+def getSum(n):
+    
+    
+sum = 1
+    while (n != 0):
+       
+        
+sum = sum  * (n % 10)
+        
+n = n//10
+       
+    
+return sum
+   
+
+n = 12345
+
+print(getSum(n))
+
+/////reverse given num////
+
+a=int(input("enter the num"))
+c=[]
+for i in str(a):
+  b=i
+  c.append(b)
+c.sort() 
+print(c[::-1])
+
+for i in c:
+    print(i,end="")
+
+/////given num is palindrom or not/////
+
+def isPalindrome(s):
+
+    rev = ''.join(reversed(s))
+    
+   
+    if (s == rev):
+        return True
+    return False
+s = "oyo"
+ans = isPalindrome(s)
+if ans:
+    print("Yes")
+else :
+    print("No")
+
+//////given num is arm strong number or not///////
+
+num = int(input("Enter a number: "))
+
+# initialize sum
+sum = 0
+
+# find the sum of the cube of each digit
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** 3
+   temp //= 10
+
+# display the result
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+/////given year is leap year or not////
+
+year = 2012
+
+
+if (year % 400 == 0) and (year % 100 == 0):
+    print("{0} is a leap year".format(year))
+
+elif (year % 4 ==0) and (year % 100 != 0):
+    print("{0} is a leap year".format(year))
+else:
+    print("{0} is not a leap year".format(year))
+
+/////pattern * ////
+
+a=int(input("num"))
+       ###reverse (a,0,-1)
+for i in range(a):
+    
+for j in range(i):
+        
+print("*",end="")
+          ###print(i,end="") for num print
+print('')
+
+/////1,22,33,4444,55555/////
+for i in range(6):
+   
+ for j in range(i):
+        
+  print(i,end="")
+        
+  
+print('')
+
+/////666666
+55555
+4444
+333
+22
+1/////for i in range(6,0,-1):
+    
+        for j in range(i):
+        
+         print(i,end="")
+        
+    
+        print('')
+
+
+///       1 
+        1 2 
+      1 2 3 
+    1 2 3 4 
+  1 2 3 4 5////
+
+ rows = 6
+for i in range(1, rows):
+    num = 1
+    for j in range(rows, 0, -1):
+        if j > i:
+            print(" ", end=' ')
+        else:
+            print(num, end=' ')
+            num += 1
+    print("")
+
+
+////prime numbers/////
+
+for i in range(2,100):
+    
+ for j in range(2,i):
+         
+  if i%j==0:
+          
+    break
+    
+  else:
+        
+   print(i)
+
+///basic calculator///
+# Program make a simple calculator
+
+# This function adds two numbers
+def add(x, y):
+    return x + y
+
+# This function subtracts two numbers
+def subtract(x, y):
+    return x - y
+
+# This function multiplies two numbers
+def multiply(x, y):
+    return x * y
+
+# This function divides two numbers
+def divide(x, y):
+    return x / y
+
+
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+
+while True:
+    # take input from the user
+    choice = input("Enter choice(1/2/3/4): ")
+
+    # check if choice is one of the four options
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        
+        # check if user wants another calculation
+        # break the while loop if answer is no
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+        if next_calculation == "no":
+          break
+    
+    else:
+        print("Invalid Input") 
+
+
+////tables programe///
+
+# Multiplication table (from 1 to 10) in Python
+
+
+num = int(input("Display multiplication table of? "))
+
+# Iterate 10 times from i = 1 to 10
+for i in range(1, 11):
+   print(num, 'x', i, '=', num*i)
+
+////gross salary of employee///
+def weeklyPaid(hours_worked, wage):
+	if hours_worked > 40:
+		return 40 * wage + (hours_worked - 40) * wage * 1.5
+	else:
+		return hours_worked * wage
+
+
+hours_worked = 50
+wage = 100
+
+pay = weeklyPaid(hours_worked, wage)
+
+print(f"Total gross pay: Rs.{pay:.2f} ")
+
+///swap two number not using third variable///
+
+x,y=y,x
+or
+x=x+y
+y=x-y
+x=x-y
+
+////swap two number using third variable///
+
+temp = x
+x = y
+y = temp
+
+//////factorial num/////
+
+factorial=1
+
+for i in range(1,10+1):
+    
+ factorial=factorial*i
+
+  print(factorial)
+
+////fibonaci series///
+
+a=0
+
+b=1 
+
+n=int(input("enter the num u want"))
+
+for i in range(n):
+    
+  c=a+b
+    
+  a=b
+   
+  b=c
+    
+  print(c)
+
+////ASCII TABLE///
+
+digit = 0
+
+while digit<=255:
+    print("%d = %c" %(digit, chr(digit)))
+    digit += 1
+
+///
+1
+01
+101
+0101
+10101
+010101////
+
+for i in range(1, 16):
+    for j in range(i, i+i):
+        print(j%2, end="")
+    print()
